@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E32A2C8239ED6FF00771652 /* AppleStockDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E32A2C7239ED6FF00771652 /* AppleStockDetailViewController.swift */; };
 		3E43D9732398D26500B0C158 /* Bundles+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E43D9722398D26500B0C158 /* Bundles+Extensions.swift */; };
 		3E9DA09A2398CAF7001A9F22 /* userInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9DA0992398CAF7001A9F22 /* userInfoData.swift */; };
 		3EE89FB523998E81009614A8 /* userinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 3EE89FB423998E81009614A8 /* userinfo.json */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E32A2C7239ED6FF00771652 /* AppleStockDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleStockDetailViewController.swift; sourceTree = "<group>"; };
 		3E43D9722398D26500B0C158 /* Bundles+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Bundles+Extensions.swift"; path = "PeopleAndAppleStockPricesUITests/Bundles+Extensions.swift"; sourceTree = SOURCE_ROOT; };
 		3E9DA0992398CAF7001A9F22 /* userInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userInfoData.swift; sourceTree = "<group>"; };
 		3EE89FB423998E81009614A8 /* userinfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = userinfo.json; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				3EE89FC62399B07F009614A8 /* UserInfoDetailViewController.swift */,
 				3EE89FF6239AE58B009614A8 /* AppleStockInfo.swift */,
 				3EEA5828239AF2D000852C33 /* AppleStocksViewController.swift */,
+				3E32A2C7239ED6FF00771652 /* AppleStockDetailViewController.swift */,
 			);
 			path = "Controllers!";
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E32A2C8239ED6FF00771652 /* AppleStockDetailViewController.swift in Sources */,
 				3EE89FF7239AE58B009614A8 /* AppleStockInfo.swift in Sources */,
 				3EE89FC72399B07F009614A8 /* UserInfoDetailViewController.swift in Sources */,
 				3EEA5829239AF2D000852C33 /* AppleStocksViewController.swift in Sources */,

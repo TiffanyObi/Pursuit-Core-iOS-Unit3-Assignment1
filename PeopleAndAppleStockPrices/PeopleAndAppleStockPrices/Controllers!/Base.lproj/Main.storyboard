@@ -160,6 +160,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="gxo-wO-xKz" kind="show" id="Odc-0Z-lPB"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -175,6 +178,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ag0-Ph-iAC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1550.7246376811595" y="880.58035714285711"/>
+        </scene>
+        <!--Apple Stock Detail View Controller-->
+        <scene sceneID="vaz-nM-9Fd">
+            <objects>
+                <viewController id="gxo-wO-xKz" customClass="AppleStockDetailViewController" customModule="PeopleAndAppleStockPrices" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PLQ-4B-ACW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KtB-PH-Yk9">
+                                <rect key="frame" x="0.0" y="88" width="414" height="341"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyT-wb-qbh">
+                                <rect key="frame" x="20" y="509" width="374" height="45.5"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcf-in-Bat">
+                                <rect key="frame" x="120" y="595" width="174" height="20.5"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LdK-l1-M6O">
+                                <rect key="frame" x="120" y="655.5" width="174" height="20.5"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VY1-G0-xzZ" firstAttribute="trailing" secondItem="LdK-l1-M6O" secondAttribute="trailing" constant="120" id="4hy-jJ-shL"/>
+                            <constraint firstItem="Gcf-in-Bat" firstAttribute="leading" secondItem="VY1-G0-xzZ" secondAttribute="leading" constant="120" id="50U-5k-ZHF"/>
+                            <constraint firstItem="KtB-PH-Yk9" firstAttribute="trailing" secondItem="VY1-G0-xzZ" secondAttribute="trailing" id="HY9-tS-fUy"/>
+                            <constraint firstItem="LdK-l1-M6O" firstAttribute="top" secondItem="Gcf-in-Bat" secondAttribute="bottom" constant="40" id="MB6-JQ-ozm"/>
+                            <constraint firstItem="VY1-G0-xzZ" firstAttribute="trailing" secondItem="Gcf-in-Bat" secondAttribute="trailing" constant="120" id="PIB-TX-TAh"/>
+                            <constraint firstItem="Gcf-in-Bat" firstAttribute="top" secondItem="cyT-wb-qbh" secondAttribute="bottom" constant="40.5" id="RpJ-Nn-mMY"/>
+                            <constraint firstItem="VY1-G0-xzZ" firstAttribute="trailing" secondItem="cyT-wb-qbh" secondAttribute="trailing" constant="20" id="Rx5-U4-T6a"/>
+                            <constraint firstItem="KtB-PH-Yk9" firstAttribute="top" secondItem="VY1-G0-xzZ" secondAttribute="top" id="U5B-U9-8fN"/>
+                            <constraint firstItem="cyT-wb-qbh" firstAttribute="leading" secondItem="VY1-G0-xzZ" secondAttribute="leading" constant="20" id="W2X-Ro-NDs"/>
+                            <constraint firstItem="KtB-PH-Yk9" firstAttribute="leading" secondItem="VY1-G0-xzZ" secondAttribute="leading" id="Ycw-Cg-Uax"/>
+                            <constraint firstItem="LdK-l1-M6O" firstAttribute="leading" secondItem="VY1-G0-xzZ" secondAttribute="leading" constant="120" id="euT-vK-Jti"/>
+                            <constraint firstItem="cyT-wb-qbh" firstAttribute="top" secondItem="KtB-PH-Yk9" secondAttribute="bottom" constant="80" id="jls-ZL-Awg"/>
+                            <constraint firstItem="KtB-PH-Yk9" firstAttribute="height" secondItem="PLQ-4B-ACW" secondAttribute="height" multiplier="0.38058" id="q55-bd-E7e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VY1-G0-xzZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FPI-kn-iT6"/>
+                    <connections>
+                        <outlet property="closingPriceLabel" destination="LdK-l1-M6O" id="GmP-U3-oaD"/>
+                        <outlet property="dateLabel" destination="cyT-wb-qbh" id="Fl8-xH-wYo"/>
+                        <outlet property="imageView" destination="KtB-PH-Yk9" id="78j-Hf-NeF"/>
+                        <outlet property="openingPriceLabel" destination="Gcf-in-Bat" id="42g-Nq-3vO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DSm-NX-Xcu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2728.985507246377" y="945.53571428571422"/>
         </scene>
         <!--Users!-->
         <scene sceneID="P4w-XT-cOL">

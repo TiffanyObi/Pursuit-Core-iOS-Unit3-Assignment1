@@ -14,6 +14,7 @@ struct AppleInfo: Decodable {
     let uOpen : Double
     let change : Double
     let label : String
+    let close : Double
     
     static func getStocks () -> [AppleInfo] {
            var stocks = [AppleInfo]()
@@ -73,6 +74,6 @@ struct AppleInfo: Decodable {
             
            return sectionsArr
        }
-        
+    
 }
 

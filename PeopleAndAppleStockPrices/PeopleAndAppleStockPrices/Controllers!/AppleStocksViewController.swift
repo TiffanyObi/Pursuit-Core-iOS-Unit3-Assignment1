@@ -31,7 +31,29 @@ class AppleStocksViewController: UIViewController {
         appleStocks = AppleInfo.getSections()
     }
     
-
+    
+func getOpenAverage(monthStocks: [AppleInfo]) -> String {
+        var totalSum: Double = 0
+    var average: Double = 0
+        for month in monthStocks {
+        
+            totalSum += month.open
+        }
+   average = totalSum / Double(monthStocks.count)
+    let fixedString = String(format: "%.2f",average)
+        return fixedString
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let stockInfo = segue.destination as? AppleStockDetailViewController,
+            let indexPath = tableView.indexPathForSelectedRow else {
+                fatalError("verify class name in the identity insepector")
+        }
+        
+        let info = appleStocks[indexPath.section][indexPath.row]
+        stockInfo.info = info
+    }
     
 }
 
@@ -45,7 +67,7 @@ extension AppleStocksViewController: UITableViewDataSource {
         
         let stockInfo = appleStocks[indexPath.section][indexPath.row]
         
-        stockCell.textLabel?.text = stockInfo.date
+        stockCell.textLabel?.text = stockInfo.label
         return stockCell
     }
     
@@ -53,8 +75,16 @@ extension AppleStocksViewController: UITableViewDataSource {
         appleStocks.count
     }
     
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return appleStocks[section].first?.date
+      
+        let thisLabel = appleStocks[section].first?.label
+        var newTitle = thisLabel?.components(separatedBy: " ")
+        newTitle?.remove(at: 1)
+        let finalTitle = newTitle?.joined(separator: " '")
+        let average = getOpenAverage(monthStocks:appleStocks[section] )
+        
+        return "\(finalTitle ?? " ") -------> Opening Average: \(average) "
     }
     
 }
